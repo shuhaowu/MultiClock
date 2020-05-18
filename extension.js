@@ -46,9 +46,9 @@ const AltTimeMenuButton = new Lang.Class({
         this.parent(menuAlignment);
 
         // Widget set-up
-        this._clockDisplay = new St.Label({text: 'Initialising', opacity: 150});
-        this.actor.add_actor(this._clockDisplay);
-        this.actor.set_y_align(Clutter.ActorAlign.CENTER);
+        this._clockDisplay = new St.Label({text: 'Initialising', opacity: 150, style_class: "multiclock-label"});
+        this.add_actor(this._clockDisplay);
+        this.set_y_align(Clutter.ActorAlign.CENTER);
 
         // Importing clock-related things from outside
         this._clock = new GnomeDesktop.WallClock();
